@@ -1,0 +1,152 @@
+/* Container Styles */
+.container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1f2937 0%, #08090b 100%);
+  min-height: 100vh;
+  flex-direction: row; /* Ensure it's row */
+  gap: 45px; /* Add space between the sections */
+}
+
+/* Content Styles */
+.content {
+  z-index: 2;
+  max-width: 400px; /* Adjusted for two columns */
+  width: 100%;
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Left and Right Sections */
+.left-section {
+  flex: 1;
+  text-align: left;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Title Styles */
+.title {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Description Styles */
+.description {
+  font-size: 1em;
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* Button Styles */
+.contactBtn {
+  display: inline-block;
+  padding: 11px 23px;
+  font-size: 1em;
+  text-decoration: none;
+  background-color: #d1d1d1;
+  color: black;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.contactBtn:hover {
+  background-color: #8e6e55;
+}
+
+/* Hero Image Styles */
+.heroImg {
+  width: 400px; /* Larger size */
+  height: 350px; /* Larger size */
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Blur Effect Styles */
+.topBlur,
+.bottomBlur {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+.topBlur {
+  top: 0;
+}
+
+.bottomBlur {
+  bottom: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-section,
+  .right-section {
+    max-width: 100%;
+  }
+  .title {
+    font-size: 2.5em;
+  }
+  .description {
+    font-size: 1.2em;
+  }
+  .heroImg {
+    width: 390px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .description {
+    font-size: 1em;
+  }
+
+  .heroImg {
+    width: 400px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5em;
+  }
+
+  .description {
+    font-size: 0.9em;
+  }
+
+  .contactBtn {
+    font-size: 0.9em;
+    padding: 10px 20px;
+  }
+
+  .heroImg {
+    width: 300px;
+    height: 250px;
+  }
+}
